@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
 MAINTAINER citra
 RUN apt-get update && apt-get install -y gpg wget git python3-pip ccache g++-mingw-w64-x86-64 gcc-mingw-w64-x86-64 mingw-w64-tools cmake
+# workaround broken headers in Ubuntu MinGW package
 COPY errno.h /usr/x86_64-w64-mingw32/include/
 # HACK: the repository does not contain necessary packages for 18.04, we'll use packages for 17.10 for now
 RUN echo 'deb http://ppa.launchpad.net/tobydox/mingw-w64/ubuntu artful main ' > /etc/apt/sources.list.d/extras.list
