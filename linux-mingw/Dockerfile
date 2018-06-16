@@ -1,5 +1,6 @@
 FROM ubuntu:18.04
 MAINTAINER citra
+RUN useradd -m -s /bin/bash citra
 RUN apt-get update && apt-get install -y gpg wget git python3-pip ccache g++-mingw-w64-x86-64 gcc-mingw-w64-x86-64 mingw-w64-tools cmake
 # workaround broken headers in Ubuntu MinGW package
 COPY errno.h /usr/x86_64-w64-mingw32/include/

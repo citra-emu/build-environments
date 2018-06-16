@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 MAINTAINER citra
-RUN mkdir -p /tmp/pkgs
+RUN useradd -m -s /bin/bash citra && mkdir -p /tmp/pkgs
 COPY install_package.py /tmp/pkgs
 RUN apt-get update && apt-get install -y build-essential wget git python-launchpadlib ccache
 RUN cd /tmp/pkgs && python2 install_package.py \
