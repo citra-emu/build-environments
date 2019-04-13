@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-MAINTAINER citra
+LABEL maintainer="citraemu"
 RUN useradd -m -s /bin/bash citra && mkdir -p /tmp/pkgs
 RUN apt-get update && apt-get install -y gpg wget git python3-pip ccache p7zip-full g++-mingw-w64-x86-64 gcc-mingw-w64-x86-64 mingw-w64-tools cmake ninja-build
 # workaround broken headers in Ubuntu MinGW package
