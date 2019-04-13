@@ -16,3 +16,4 @@ RUN cd /tmp/pkgs && python2 install_package.py \
     libavformat-dev 7:3.4.4-0ubuntu0.18.04.1 bionic  \
     libswscale-dev 7:3.4.4-0ubuntu0.18.04.1 bionic
 RUN rm -rf /tmp/pkgs
+USER citra
