@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 LABEL maintainer="citraemu"
 RUN mkdir -p /tmp/pkgs
 COPY install_package.py /tmp/pkgs
