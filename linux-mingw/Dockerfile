@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 LABEL maintainer="citraemu"
 RUN mkdir -p /tmp/pkgs
 RUN apt-get update && apt-get install -y gpg wget git python3-pip ccache p7zip-full g++-mingw-w64-x86-64 gcc-mingw-w64-x86-64 mingw-w64-tools cmake ninja-build
